@@ -8,6 +8,8 @@ var app = require('../app');
 var debug = require('debug')('ejs:server');
 var https = require('https');
 var fs = require('fs');
+var path = require('path');
+
     // const filePath = path.resolve('./data');
 //     let content = fs.readFileSync(path.join(filePath, 'domain.json'), 'utf-8');
 /**
