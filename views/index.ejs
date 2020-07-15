@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title><%=title%></title>
+    <meta name="keywords" content="<%=title%>" />
+    <meta name="description" content="<%=title%>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style/app.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div class="navbox">
+            <h2 id="mnavh"><span class="navicon"></span></h2>
+            <div class="logo"><a href="<%=domain%>/" alt="涛哥大神前端" title="涛哥大神前端">涛哥大神前端 |<font class="font16">web前端，小程序</font>
+                </a></div>
+            <nav>
+                <ul id="starlist">
+                    <li><a href="<%=title%>/" title="首页">网站首页</a></li>
+                    <li class="menu"><a href="<%=domain%>/" target="_blank">栏目介绍</a>
+                        <ul class="sub">
+                            <li><a href="<%=domain%>/list?column=抖音" target="_blank">HTML</a></li>
+                            <li><a href="<%=domain%>/list?column=赚钱" target="_blank">CSS</a></li>
+                        </ul><span></span>
+                    </li>
+                    <li class="menu"><a href="<%=domain%>/about/" target="_blank">关于我们</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <article>
+        <div class="lbox">
+            <div class="banbox">
+                <div class="banner">
+                    <div id="banner" class="fader">
+                        <li class="slide" style="opacity: 1;"><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e942d"
+                                target="_blank"><img data-src="<%=domain%>/images/banner1.jpg"></a></li>
+                        <li class="slide"><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e942d" target="_blank"><img
+                                    data-src="<%=domain%>/images/banner2.jpg"></a></li>
+                        <div class="fader_controls">
+                            <div class="page prev" data-target="prev"></div>
+                            <div class="page next" data-target="next"></div>
+                            <ul class="pager_list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headline">
+                <ul>
+                    <li><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e943f" title="年轻如何创业？流量思维教你月入十万" target="_blank"><img
+                                data-src="<%=domain%>/images/banner1.jpg"
+                                alt="年轻如何创业？流量思维教你月入十万"><span>年轻如何创业？流量思维教你月入十万</span></a></li>
+                    <li><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e9440" title="平台为基，项目为砖，廊坊涛哥大神前端心水如何打造创业者财富大厦？"
+                            target="_blank"><img data-src="<%=domain%>/images/banner2.jpg"
+                                alt="平台为基，项目为砖，廊坊涛哥大神前端心水如何打造创业者财富大厦？"><span>平台为基，项目为砖，廊坊涛哥大神前端心水如何打造创业者财富大厦？</span></a></li>
+                </ul>
+            </div>
+            <div class="clearblank"></div>
+            <div class="tab_box whitebg">
+                <div class="tab_buttons">
+                    <ul>
+                        <li class="newscurrent">HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                        <li>NODE</li>
+                    </ul>
+                </div>
+                <div class="newstab">
+                    <div class="newsitem newsitemshow">
+                        <div class="newspic">
+                            <ul><% data.dy1.slice(0,2).forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %></ul>
+                        </div>
+                        <ul class="newslist"><% data.dy.slice(0,2).forEach(function(item){%><li><i></i><a
+                                    href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>"
+                                    target="_blank"><%=item.title%></a>
+                                <p><%=item.description%></p>
+                            </li><% }) %></ul>
+                    </div>
+                    <div class="newsitem">
+                        <div class="newspic">
+                            <ul><% data.dy1.slice(2,4).forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %></ul>
+                        </div>
+                        <ul class="newslist"><% data.dy.slice(2,4).forEach(function(item){%><li><i></i><a
+                                    href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>"
+                                    target="_blank"><%=item.title%></a>
+                                <p><%=item.description%></p>
+                            </li><% }) %></ul>
+                    </div>
+                    <div class="newsitem">
+                        <div class="newspic">
+                            <ul><% data.dy1.slice(4,6).forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %></ul>
+                        </div>
+                        <ul class="newslist"><% data.dy.slice(4,6).forEach(function(item){%><li><i></i><a
+                                    href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>"
+                                    target="_blank"><%=item.title%></a>
+                                <p><%=item.description%></p>
+                            </li><% }) %></ul>
+                    </div>
+                    <div class="newsitem">
+                        <div class="newspic">
+                            <ul><% data.dy1.slice(6,8).forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %></ul>
+                        </div>
+                        <ul class="newslist"><% data.dy.slice(6,8).forEach(function(item){%><li><i></i><a
+                                    href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>"
+                                    target="_blank"><%=item.title%></a>
+                                <p><%=item.description%></p>
+                            </li><% }) %></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ad whitebg"></div>
+            <div class="zhuanti whitebg">
+                <h2 class="htitle"><span class="hnav"></span>栏目介绍</h2>
+                <ul>
+
+                    <li><i class="ztpic"><a href="<%=domain%>/list?column=抖音" target="_blank"><img
+                                    data-src="<%=domain%>/images/gongcheng.webp"></a></i><b>平台为基，项目为砖，廊坊涛哥大神前端心水如何打造创业者财富大厦？</b><span>廊坊涛哥大神前端心水是一家创业者服务公司，所谓创业者服务，即是为大众创业者提供在线培训，给他们对接创业项目，并持续进行创业服务，让创业者和商家建立合作关系，赚到创业第一桶金。</span><a
+                            href="<%=domain%>/list?column=抖音" target="_blank" class="readmore">文章阅读</a></li>
+                    <li><i class="ztpic"><a href="<%=domain%>/list?column=抖音" target="_blank"><img
+                                    data-src="<%=domain%>/images/hezuo.webp"></a></i><b>年轻如何创业？流量思维教你月入十万</b><span>以前创业首先要有货源、要有场地，现在互联网时代，就算什么都没有，有一台电脑甚至一台手机，就能创业</span><a
+                            href="<%=domain%>/list?column=抖音" target="_blank" class="readmore">文章阅读</a></li>
+                    <li><i class="ztpic"><a href="<%=domain%>/list?column=抖音" target="_blank"><img
+                                    data-src="<%=domain%>/images/hezuo2.webp"></a></i><b>小白创业避坑需知，廊坊涛哥大神前端心水平台助你走上人生巅峰</b><span>你是因为没钱而失眠的人之一吗？想要通过创业赚钱</span><a
+                            href="<%=domain%>/list?column=抖音" target="_blank" class="readmore">文章阅读</a></li>
+                </ul>
+            </div>
+            <div class="ad whitebg"></div>
+            <div class="newsbox">
+                <section>
+                    <div class="news">
+                        <h2 class="newstitle"><span><a href="<%=domain%>/news/s/"
+                                    target="_blank">更多</a></span><b>HTML</b></h2>
+                        <ul>
+                            <% data.dy.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                                target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="news">
+                        <h2 class="newstitle"><span><a href="<%=domain%>/news/life/"
+                                    target="_blank">更多</a></span><b>CSS</b></h2>
+                        <ul>
+                            <% data.zq.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                                target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="news">
+                        <h2 class="newstitle"><span><a href="<%=domain%>/jstt/css3/"
+                                    target="_blank">更多</a></span><b>JS</b></h2>
+                        <ul>
+                            <% data.dy1.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                                target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="news">
+                        <h2 class="newstitle"><span><a href="<%=domain%>/jstt/web/"
+                                    target="_blank">更多</a></span><b>NODE</b></h2>
+                        <ul>
+                            <% data.zq1.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                                target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="rbox">
+            <div class="card">
+                <h2>涛哥大神前端心水</h2>
+                <p>我们为您塑造全新品牌形象</p>
+                <p>主要技术：HTML,CSS,JS,NODE</p>
+                <p>Phone：17364541280</p>
+                <p>Email：2227973646@qq.com</p>
+                <ul class="linkmore">
+                    <li><a href="<%=domain%>/about/" target="_blank" class="iconfont icon-zhuye" title="涛哥大神前端心水"></a>
+                    </li>
+                    <li></li>
+                    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2227973646&site=qq&menu=yes" target="_blank"
+                            class="iconfont icon---" title="QQ联系我" rel="nofollow"></a></li>
+                    <li id="weixin"><a href="#" target="_blank" class="iconfont icon-weixin" title="关注我的微信"></a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="whitebg paihang">
+                <h2 class="htitle">引流技巧</h2>
+                <ul>
+                    <% data.dy.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                </ul>
+            </div>
+            <div class="whitebg tuijian">
+                <h2 class="htitle">常见问题</h2>
+                <ul>
+                    <% data.zq.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                </ul>
+            </div>
+            
+            <div class="whitebg wenzi">
+                <h2 class="htitle">加入我们</h2>
+                <ul>
+                    <% data.dy1.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
+                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                </ul>
+            </div>
+            <div class="links whitebg">
+                <h2 class="htitle">友情链接</h2>
+                <ul>
+                    <li><a href="<%=domain%>/" target="_blank">涛哥大神前端</a></li>
+                </ul>
+            </div>
+            <div class="whitebg wenzi">
+                <h2 class="htitle">关注我</h2><img style="width: 100%;" data-src="<%=domain%>/images/vx.jpg" alt="点我关注">
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="box">
+            <div class="wxbox">
+                <ul></ul>
+            </div>
+            <div class="endnav">
+                <p><b>站点声明：</b></p>
+                <p>Copyright &#169;<a href="<%=domain%>" target="_blank"><%=domain%></a> 涛哥大神前端 All Rights Reserved.
+                    备案号：<a href="http://www.beian.miit.gov.cn/" target="_blank">冀ICP备20016324号-1</a> 公安备案号 1123</p>
+            </div>
+        </div><a href="#">
+            <div class="top">↑</div>
+        </a>
+    </footer>
+    <script>    var imgs = document.getElementsByTagName('img'); Array.prototype.forEach.call(imgs, image => { var src = image.getAttribute('data-src'); if (src) { image.src = src; image.removeAttribute('data-src'); } }); var tabs = document.getElementsByClassName('tab_buttons')[0].getElementsByTagName('li'); var newsitems = document.getElementsByClassName('newstab')[0].getElementsByClassName('newsitem'); Array.prototype.forEach.call(tabs, (tab, inde) => { var _inde = inde; tab.onclick = function (e) { Array.prototype.forEach.call(tabs, (tab, indej) => { var _indej = indej; newsitems[_indej].className = 'newsitem'; tabs[_indej].className = ''; }); newsitems[_inde].className = 'newsitem newsitemshow'; tabs[_inde].className = 'newscurrent'; } })</script>
+</body>
+
+</html>
