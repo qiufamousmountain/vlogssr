@@ -8,7 +8,8 @@ var app = require('../app');
 var debug = require('debug')('ejs:server');
 var https = require('https');
 var fs = require('fs');
-
+    // const filePath = path.resolve('./data');
+//     let content = fs.readFileSync(path.join(filePath, 'domain.json'), 'utf-8');
 /**
  * Get port from environment and store in Express.
  */
@@ -21,8 +22,8 @@ app.set('port', port);
  */
 //index.js
 const httpsOption = {
-  key : fs.readFileSync("./ssl/2_www.siteluo7.com.key"),
-  cert: fs.readFileSync("./ssl/1_www.siteluo7.com_bundle.crt")
+  key : fs.readFileSync(path.join(__dirname, 'ssl/2_www.siteluo7.com.key')),
+  cert: fs.readFileSync(path.join(__dirname, "ssl/1_www.siteluo7.com_bundle.crt"))
 }
 var server = https.createServer(httpsOption,app);
 
