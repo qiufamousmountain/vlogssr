@@ -40,8 +40,7 @@
             <div class="banbox">
                 <div class="banner">
                     <div id="banner" class="fader">
-                        <li class="slide" style="opacity: 1;"><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e942d"
-                                target="_blank"><img data-src="<%=domain%>/images/banner1.jpg"></a></li>
+                        <li class="slide" style="opacity: 1;"><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e942d" target="_blank"><img data-src="<%=domain%>/images/banner1.jpg"></a></li>
                         <li class="slide"><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e942d" target="_blank"><img
                                     data-src="<%=domain%>/images/banner2.jpg"></a></li>
                         <div class="fader_controls">
@@ -57,8 +56,7 @@
                     <li><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e943f" title="年轻如何创业？流量思维教你月入十万" target="_blank"><img
                                 data-src="<%=domain%>/images/banner1.jpg"
                                 alt="年轻如何创业？流量思维教你月入十万"><span>年轻如何创业？流量思维教你月入十万</span></a></li>
-                    <li><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e9440" title="平台为基，项目为砖，廊坊飞享喜悦心水如何打造创业者财富大厦？"
-                            target="_blank"><img data-src="<%=domain%>/images/banner2.jpg"
+                    <li><a href="<%=domain%>/A-5f0d628c0dcb4c24c09e9440" title="平台为基，项目为砖，廊坊飞享喜悦心水如何打造创业者财富大厦？" target="_blank"><img data-src="<%=domain%>/images/banner2.jpg"
                                 alt="平台为基，项目为砖，廊坊飞享喜悦心水如何打造创业者财富大厦？"><span>平台为基，项目为砖，廊坊飞享喜悦心水如何打造创业者财富大厦？</span></a>
                     </li>
                 </ul>
@@ -76,51 +74,95 @@
                 <div class="newstab">
                     <div class="newsitem newsitemshow">
                         <div class="newspic">
-                            <ul><% data.dy1.slice(0,2).forEach(function(item){%><li><a
-                                        href="<%=domain%>/A-<%=item._id%>"
-                                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %></ul>
+                            <ul>
+                                <% data.dy1.slice(0,2).forEach(function(item){%>
+                                    <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                                    </a>
+                                    </li>
+                                    <% }) %>
+                            </ul>
                         </div>
-                        <ul class="newslist"><% data.dy.slice(0,2).forEach(function(item){%><li><i></i><a
-                                    href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>"
-                                    target="_blank"><%=item.title%></a>
-                                <p><%=item.description%></p>
-                            </li><% }) %></ul>
+                        <ul class="newslist">
+                            <% data.dy.slice(0,2).forEach(function(item){%>
+                                <li><i></i>
+                                    <a href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>" target="_blank">
+                                        <%=item.title%>
+                                    </a>
+                                    <p>
+                                        <%=item.description%>
+                                    </p>
+                                </li>
+                                <% }) %>
+                        </ul>
                     </div>
                     <div class="newsitem">
                         <div class="newspic">
-                            <ul><% data.dy1.slice(2,4).forEach(function(item){%><li><a
-                                        href="<%=domain%>/A-<%=item._id%>"
-                                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %></ul>
+                            <ul>
+                                <% data.dy1.slice(2,4).forEach(function(item){%>
+                                    <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                                    </a>
+                                    </li>
+                                    <% }) %>
+                            </ul>
                         </div>
-                        <ul class="newslist"><% data.dy.slice(2,4).forEach(function(item){%><li><i></i><a
-                                    href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>"
-                                    target="_blank"><%=item.title%></a>
-                                <p><%=item.description%></p>
-                            </li><% }) %></ul>
+                        <ul class="newslist">
+                            <% data.dy.slice(2,4).forEach(function(item){%>
+                                <li><i></i>
+                                    <a href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>" target="_blank">
+                                        <%=item.title%>
+                                    </a>
+                                    <p>
+                                        <%=item.description%>
+                                    </p>
+                                </li>
+                                <% }) %>
+                        </ul>
                     </div>
                     <div class="newsitem">
                         <div class="newspic">
-                            <ul><% data.dy1.slice(4,6).forEach(function(item){%><li><a
-                                        href="<%=domain%>/A-<%=item._id%>"
-                                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %></ul>
+                            <ul>
+                                <% data.dy1.slice(4,6).forEach(function(item){%>
+                                    <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                                    </a>
+                                    </li>
+                                    <% }) %>
+                            </ul>
                         </div>
-                        <ul class="newslist"><% data.dy.slice(4,6).forEach(function(item){%><li><i></i><a
-                                    href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>"
-                                    target="_blank"><%=item.title%></a>
-                                <p><%=item.description%></p>
-                            </li><% }) %></ul>
+                        <ul class="newslist">
+                            <% data.dy.slice(4,6).forEach(function(item){%>
+                                <li><i></i>
+                                    <a href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>" target="_blank">
+                                        <%=item.title%>
+                                    </a>
+                                    <p>
+                                        <%=item.description%>
+                                    </p>
+                                </li>
+                                <% }) %>
+                        </ul>
                     </div>
                     <div class="newsitem">
                         <div class="newspic">
-                            <ul><% data.dy1.slice(6,8).forEach(function(item){%><li><a
-                                        href="<%=domain%>/A-<%=item._id%>"
-                                        target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %></ul>
+                            <ul>
+                                <% data.dy1.slice(6,8).forEach(function(item){%>
+                                    <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                                    </a>
+                                    </li>
+                                    <% }) %>
+                            </ul>
                         </div>
-                        <ul class="newslist"><% data.dy.slice(6,8).forEach(function(item){%><li><i></i><a
-                                    href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>"
-                                    target="_blank"><%=item.title%></a>
-                                <p><%=item.description%></p>
-                            </li><% }) %></ul>
+                        <ul class="newslist">
+                            <% data.dy.slice(6,8).forEach(function(item){%>
+                                <li><i></i>
+                                    <a href="<%=domain%>/A-<%=item._id%>" title="<%=item.title%>" target="_blank">
+                                        <%=item.title%>
+                                    </a>
+                                    <p>
+                                        <%=item.description%>
+                                    </p>
+                                </li>
+                                <% }) %>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -130,14 +172,12 @@
                 <ul>
 
                     <li><i class="ztpic"><a href="<%=domain%>/list?column=抖音" target="_blank"><img
-                                    data-src="<%=domain%>/images/gongcheng.webp"></a></i><b>平台为基，项目为砖，廊坊飞享喜悦心水如何打造创业者财富大厦？</b><span>廊坊飞享喜悦心水是一家创业者服务公司，所谓创业者服务，即是为大众创业者提供在线培训，给他们对接创业项目，并持续进行创业服务，让创业者和商家建立合作关系，赚到创业第一桶金。</span><a
-                            href="<%=domain%>/list?column=抖音" target="_blank" class="readmore">文章阅读</a></li>
+                                    data-src="<%=domain%>/images/gongcheng.webp"></a></i><b>平台为基，项目为砖，廊坊飞享喜悦心水如何打造创业者财富大厦？</b><span>廊坊飞享喜悦心水是一家创业者服务公司，所谓创业者服务，即是为大众创业者提供在线培训，给他们对接创业项目，并持续进行创业服务，让创业者和商家建立合作关系，赚到创业第一桶金。</span><a href="<%=domain%>/list?column=抖音"
+                            target="_blank" class="readmore">文章阅读</a></li>
                     <li><i class="ztpic"><a href="<%=domain%>/list?column=抖音" target="_blank"><img
-                                    data-src="<%=domain%>/images/hezuo.webp"></a></i><b>年轻如何创业？流量思维教你月入十万</b><span>以前创业首先要有货源、要有场地，现在互联网时代，就算什么都没有，有一台电脑甚至一台手机，就能创业</span><a
-                            href="<%=domain%>/list?column=抖音" target="_blank" class="readmore">文章阅读</a></li>
+                                    data-src="<%=domain%>/images/hezuo.webp"></a></i><b>年轻如何创业？流量思维教你月入十万</b><span>以前创业首先要有货源、要有场地，现在互联网时代，就算什么都没有，有一台电脑甚至一台手机，就能创业</span><a href="<%=domain%>/list?column=抖音" target="_blank" class="readmore">文章阅读</a></li>
                     <li><i class="ztpic"><a href="<%=domain%>/list?column=抖音" target="_blank"><img
-                                    data-src="<%=domain%>/images/hezuo2.webp"></a></i><b>小白创业避坑需知，廊坊飞享喜悦心水平台助你走上人生巅峰</b><span>你是因为没钱而失眠的人之一吗？想要通过创业赚钱</span><a
-                            href="<%=domain%>/list?column=抖音" target="_blank" class="readmore">文章阅读</a></li>
+                                    data-src="<%=domain%>/images/hezuo2.webp"></a></i><b>小白创业避坑需知，廊坊飞享喜悦心水平台助你走上人生巅峰</b><span>你是因为没钱而失眠的人之一吗？想要通过创业赚钱</span><a href="<%=domain%>/list?column=抖音" target="_blank" class="readmore">文章阅读</a></li>
                 </ul>
             </div>
             <div class="ad whitebg"></div>
@@ -147,8 +187,11 @@
                         <h2 class="newstitle"><span><a href="<%=domain%>/news/s/" target="_blank">更多</a></span><b>推广</b>
                         </h2>
                         <ul>
-                            <% data.dy.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
-                                    target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                            <% data.dy.forEach(function(item){%>
+                                <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                                </a>
+                                </li>
+                                <% }) %>
                         </ul>
                     </div>
                 </section>
@@ -157,8 +200,11 @@
                         <h2 class="newstitle"><span><a href="<%=domain%>/news/life/"
                                     target="_blank">更多</a></span><b>运营</b></h2>
                         <ul>
-                            <% data.zq.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
-                                    target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                            <% data.zq.forEach(function(item){%>
+                                <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                                </a>
+                                </li>
+                                <% }) %>
                         </ul>
                     </div>
                 </section>
@@ -167,8 +213,11 @@
                         <h2 class="newstitle"><span><a href="<%=domain%>/jstt/css3/"
                                     target="_blank">更多</a></span><b>营销</b></h2>
                         <ul>
-                            <% data.dy1.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
-                                    target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                            <% data.dy1.forEach(function(item){%>
+                                <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                                </a>
+                                </li>
+                                <% }) %>
                         </ul>
                     </div>
                 </section>
@@ -177,8 +226,11 @@
                         <h2 class="newstitle"><span><a href="<%=domain%>/jstt/web/"
                                     target="_blank">更多</a></span><b>热门新闻</b></h2>
                         <ul>
-                            <% data.zq1.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
-                                    target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                            <% data.zq1.forEach(function(item){%>
+                                <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                                </a>
+                                </li>
+                                <% }) %>
                         </ul>
                     </div>
                 </section>
@@ -197,23 +249,32 @@
             <div class="whitebg paihang">
                 <h2 class="htitle">技巧分享</h2>
                 <ul>
-                    <% data.dy.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
-                            target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                    <% data.dy.forEach(function(item){%>
+                        <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                        </a>
+                        </li>
+                        <% }) %>
                 </ul>
             </div>
             <div class="whitebg tuijian">
                 <h2 class="htitle">常见问题</h2>
                 <ul>
-                    <% data.zq.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
-                            target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                    <% data.zq.forEach(function(item){%>
+                        <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                        </a>
+                        </li>
+                        <% }) %>
                 </ul>
             </div>
 
             <div class="whitebg wenzi">
                 <h2 class="htitle">加入我们</h2>
                 <ul>
-                    <% data.dy1.forEach(function(item){%><li><a href="<%=domain%>/A-<%=item._id%>"
-                            target="_blank"><span><%=item.title%></span></a></li></a></li><% }) %>
+                    <% data.dy1.forEach(function(item){%>
+                        <li><a href="<%=domain%>/A-<%=item._id%>" target="_blank"><span><%=item.title%></span></a></li>
+                        </a>
+                        </li>
+                        <% }) %>
                 </ul>
             </div>
             <div class="links whitebg">
@@ -227,21 +288,31 @@
             </div>
         </div>
     </article>
-    <footer>
-        <div class="box">
-            <div class="wxbox">
-                <ul></ul>
-            </div>
-            <div class="endnav">
-                <p><b>站点声明：</b></p>
-                <p>Copyright &#169;<a href="<%=domain%>" target="_blank"><%=domain%></a> 飞享喜悦 All Rights Reserved.
-                    备案号：<a href="http://www.beian.miit.gov.cn/" target="_blank">冀ICP备20016324号-1</a></p>
-            </div>
-        </div><a href="#">
-            <div class="top">↑</div>
-        </a>
-    </footer>
-    <script>    var imgs = document.getElementsByTagName('img'); Array.prototype.forEach.call(imgs, image => { var src = image.getAttribute('data-src'); if (src) { image.src = src; image.removeAttribute('data-src'); } }); var tabs = document.getElementsByClassName('tab_buttons')[0].getElementsByTagName('li'); var newsitems = document.getElementsByClassName('newstab')[0].getElementsByClassName('newsitem'); Array.prototype.forEach.call(tabs, (tab, inde) => { var _inde = inde; tab.onclick = function (e) { Array.prototype.forEach.call(tabs, (tab, indej) => { var _indej = indej; newsitems[_indej].className = 'newsitem'; tabs[_indej].className = ''; }); newsitems[_inde].className = 'newsitem newsitemshow'; tabs[_inde].className = 'newscurrent'; } })</script>
+    <%include footer.ejs%>
+        <script>
+            var imgs = document.getElementsByTagName('img');
+            Array.prototype.forEach.call(imgs, image => {
+                var src = image.getAttribute('data-src');
+                if (src) {
+                    image.src = src;
+                    image.removeAttribute('data-src');
+                }
+            });
+            var tabs = document.getElementsByClassName('tab_buttons')[0].getElementsByTagName('li');
+            var newsitems = document.getElementsByClassName('newstab')[0].getElementsByClassName('newsitem');
+            Array.prototype.forEach.call(tabs, (tab, inde) => {
+                var _inde = inde;
+                tab.onclick = function(e) {
+                    Array.prototype.forEach.call(tabs, (tab, indej) => {
+                        var _indej = indej;
+                        newsitems[_indej].className = 'newsitem';
+                        tabs[_indej].className = '';
+                    });
+                    newsitems[_inde].className = 'newsitem newsitemshow';
+                    tabs[_inde].className = 'newscurrent';
+                }
+            })
+        </script>
 </body>
 
 </html>

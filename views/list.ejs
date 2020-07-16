@@ -2,101 +2,103 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title><%=title%></title>
-  <meta name="keywords" content="<%=keywords%>" />
-  <meta name="description" content="<%=description%>" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="<%=domain%>/images/favicon.ico" type="image/x-icon">
-  <link href="/style/detail.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>
+        <%=title%>
+    </title>
+    <meta name="keywords" content="<%=keywords%>" />
+    <meta name="description" content="<%=description%>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="<%=domain%>/images/favicon.ico" type="image/x-icon">
+    <link href="/style/detail.css" rel="stylesheet">
 </head>
 
 <body>
-  <!--top begin-->
-  <article>
-    <nav>
-      <div class="topnav"> <a href="<%=domain%>/" class="logo">
-          <h1 style="height: 50px;line-height: 50px;font-size: 26px;">飞享喜悦</h1>
-        </a>
-        <ul id="starlist">
-          <li><a class="<%-column=='抖音'?'selected':0%>" href="<%=domain%>/list?column=抖音">抖音</a></li>
-          <!-- <li><a class="<%-column=='小程序'?'selected':0%>" href="<%=domain%>/list?column=小程序">小程序</a></li> -->
-          <li><a class="<%-column=='赚钱'?'selected':0%>" href="<%=domain%>/list?column=赚钱">赚钱</a></li>
-        </ul>
-      </div>
-      <span></span>
-    </nav>
-    <div class="box_l">
-      <div class="weizhi">您现在的位置是：<a href="<%=domain%>/">首页</a>&nbsp;>&nbsp;<a
-          href="<%=domain%>/list?column=<%=column%>/"><%=column%></a>
-      </div>
-      <ul class="news_list">
+    <!--top begin-->
+    <article>
+        <nav>
+            <div class="topnav">
+                <a href="<%=domain%>/" class="logo">
+                    <h1 style="height: 50px;line-height: 50px;font-size: 26px;">飞享喜悦</h1>
+                </a>
+                <ul id="starlist">
+                    <li><a class="<%-column=='抖音'?'selected':0%>" href="<%=domain%>/list?column=抖音">抖音</a></li>
+                    <!-- <li><a class="<%-column=='小程序'?'selected':0%>" href="<%=domain%>/list?column=小程序">小程序</a></li> -->
+                    <li><a class="<%-column=='赚钱'?'selected':0%>" href="<%=domain%>/list?column=赚钱">赚钱</a></li>
+                </ul>
+            </div>
+            <span></span>
+        </nav>
+        <div class="box_l">
+            <div class="weizhi">您现在的位置是：<a href="<%=domain%>/">首页</a>&nbsp;>&nbsp;
+                <a href="<%=domain%>/list?column=<%=column%>/">
+                    <%=column%>
+                </a>
+            </div>
+            <ul class="news_list">
 
-        <% list.forEach(function(item){%>
-        <a href="<%=domain%>/A-<%=item._id%>" title="<%=item.title %>" target="_blank">
-        <h2><%=item.title %></h2>
-        <li>
+                <% list.forEach(function(item){%>
+                    <a href="<%=domain%>/A-<%=item._id%>" title="<%=item.title %>" target="_blank">
+                        <h2>
+                            <%=item.title %>
+                        </h2>
+                        <li>
 
-          <p class="news_list_info">
-            <%=item.description %></p>
-          <p class="news_list_time"><span><a href="<%=domain%>/A-<%=item._id%>"
+                            <p class="news_list_info">
+                                <%=item.description %>
+                            </p>
+                            <p class="news_list_time"><span><a href="<%=domain%>/A-<%=item._id%>"
                 target="_blank"><%=item.column %></a></span><span>日期：<%=item.ctime%></span></p>
-        </li>
-        </a>
-        <% }) %>
-      </ul>
-     
-      <div class="otherlink">
-        <h2 class="news_t">相关文章</h2>
-        <ul>
-          <% olist.forEach(function(item){%>
-          <li><a href="<%=domain%>/A-<%=item._id%>" title="<%=item.title %>"><%=item.title %></a></li>
-          <% }) %>
+                        </li>
+                    </a>
+                    <% }) %>
+            </ul>
 
-        </ul>
-      </div>
-    </div>
-    <aside class="box_r">
-      <div class="search">
-        <form action="<%=domain%>/e/search/index.php" method="post" name="searchform" id="searchform">
-          <input name="keyboard" id="keyboard" class="input_text" value="搜寻你的博客之路" style="color: rgb(153, 153, 153);"
-            onfocus="if(value=='搜寻你的博客之路'){this.style.color='#000';value=''}"
-            onblur="if(value==''){this.style.color='#999';value='搜寻你的博客之路'}" type="text">
-          <input name="show" value="title" type="hidden">
-          <input name="tempid" value="2" type="hidden">
-          <input name="tbname" value="news" type="hidden">
-          <input name="classid" value="1" type="hidden">
-          <input name="Submit" class="input_submit" value="搜索" type="submit">
-        </form>
-      </div>
-      <section>
-        <h2>站长推荐</h2>
-        <ul class="news_part03">
-          <% hlist.forEach(function(item){%>
-            <li><a href="<%=domain%>/A-<%=item._id%>" title="<%=item._id%>" target="_blank">
-          <p><%=item.title%></p>
-        </a></li>
-        <% }) %>
-          
-        </ul>
-      </section>
-      
-    </aside>
-  </article>
-  <footer>
-    <div class="box">
-      <div class="wxbox">
-        <ul>
-        </ul>
-      </div>
-      <div class="endnav">
-        <p><b>站点声明：</b></p>
-        <p>Copyright &#169; <a href="<%=domain%>" target="_blank"><%=domain%></a> 飞翔喜悦 All Rights Reserved. 备案号：<a
-            href="http://www.beian.miit.gov.cn/" target="_blank">1123</a> 公安备案号 1123</p>
-      </div>
-    </div>
+            <div class="otherlink">
+                <h2 class="news_t">相关文章</h2>
+                <ul>
+                    <% olist.forEach(function(item){%>
+                        <li>
+                            <a href="<%=domain%>/A-<%=item._id%>" title="<%=item.title %>">
+                                <%=item.title %>
+                            </a>
+                        </li>
+                        <% }) %>
 
-  </footer>
+                </ul>
+            </div>
+        </div>
+        <aside class="box_r">
+            <div class="search">
+                <form action="<%=domain%>/e/search/index.php" method="post" name="searchform" id="searchform">
+                    <input name="keyboard" id="keyboard" class="input_text" value="搜寻你的博客之路" style="color: rgb(153, 153, 153);" onfocus="if(value=='搜寻你的博客之路'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='搜寻你的博客之路'}" type="text">
+                    <input name="show" value="title" type="hidden">
+                    <input name="tempid" value="2" type="hidden">
+                    <input name="tbname" value="news" type="hidden">
+                    <input name="classid" value="1" type="hidden">
+                    <input name="Submit" class="input_submit" value="搜索" type="submit">
+                </form>
+            </div>
+            <section>
+                <h2>站长推荐</h2>
+                <ul class="news_part03">
+                    <% hlist.forEach(function(item){%>
+                        <li>
+                            <a href="<%=domain%>/A-<%=item._id%>" title="<%=item._id%>" target="_blank">
+                                <p>
+                                    <%=item.title%>
+                                </p>
+                            </a>
+                        </li>
+                        <% }) %>
+
+                </ul>
+            </section>
+
+        </aside>
+    </article>
+    <%include footer.ejs%>
+
 </body>
 
 </html>
