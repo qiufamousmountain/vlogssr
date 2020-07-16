@@ -24,16 +24,18 @@
                     <h1 style="height: 50px;line-height: 50px;font-size: 26px;">飞享喜悦</h1>
                 </a>
                 <ul id="starlist">
-                    <li><a class="<%-column=='抖音'?'selected':0%>" href="<%=domain%>/list?column=抖音">抖音</a></li>
-                    <!-- <li><a class="<%-column=='小程序'?'selected':0%>" href="<%=domain%>/list?column=小程序">小程序</a></li> -->
-                    <li><a class="<%-column=='赚钱'?'selected':0%>" href="<%=domain%>/list?column=赚钱">赚钱</a></li>
+                    <li><a class="<%-column=='推广'?'selected':0%>" href="<%=domain%>/list?column=推广">推广</a></li>
+                    <li><a class="<%-column=='运营'?'selected':0%>" href="<%=domain%>/list?column=运营">运营</a></li>
+                    <li><a class="<%-column=='营销'?'selected':0%>" href="<%=domain%>/list?column=营销">营销</a></li>
+                    <li><a class="<%-column=='热门新闻'?'selected':0%>" href="<%=domain%>/list?column=热门新闻">热门新闻</a></li>
+
                 </ul>
             </div>
             <span></span>
         </nav>
         <div class="box_l">
             <div class="weizhi">您现在的位置是：<a href="<%=domain%>/">首页</a>&nbsp;>&nbsp;
-                <a href="<%=domain%>/news/">
+                <a href="<%=domain%>/list?column=<%=column%>">
                     <%=column%>
                 </a>&nbsp;>&nbsp;
                 <a href="<%=domain%>/A-<%=_id%>">
