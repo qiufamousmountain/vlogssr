@@ -54,13 +54,7 @@
                     <%-content%>
                         <div class="pagelist"></div>
                 </div>
-                <div class="tags">
-                    <% keywords.split(',').forEach(function(item){%>
-                        <a href="<%=domain%>/" target="_blank">
-                            <%=item %>
-                        </a> &nbsp;
-                        <% }) %>
-                </div>
+               
             </div>
             <div class="info-pre-next">
                 <p>上一篇:
@@ -89,16 +83,7 @@
             </div>
         </div>
         <aside class="box_r">
-            <div class="search">
-                <form action="<%=domain%>/e/search/index.php" method="post" name="searchform" id="searchform">
-                    <input name="keyboard" id="keyboard" class="input_text" value="搜寻你的博客之路" style="color: rgb(153, 153, 153);" onfocus="if(value=='搜寻你的博客之路'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='搜寻你的博客之路'}" type="text">
-                    <input name="show" value="title" type="hidden">
-                    <input name="tempid" value="2" type="hidden">
-                    <input name="tbname" value="news" type="hidden">
-                    <input name="classid" value="1" type="hidden">
-                    <input name="Submit" class="input_submit" value="搜索" type="submit">
-                </form>
-            </div>
+
             <section>
                 <h2>站长推荐</h2>
                 <ul class="news_part03">
