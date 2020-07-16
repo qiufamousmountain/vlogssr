@@ -1,9 +1,4 @@
 @charset "utf-8";
-/**
- * base.css
- * https://www.yangqq.com/
- * Copyright 2020, design by yangqq
- */
  ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -59,11 +54,10 @@ nav span { width: 100%; display: block; height: 20px }
 .box_r section ul { padding: 20px; }
 .box_r section h2 { margin: 20px 0 0 20px; font-size: 18px; }
 .search { background: #ed4040; position: relative; border: #ed4040 2px solid; border-radius: 5px; overflow: hidden; }
-.search input.input_submit { border: 0; color: #fff; outline: none; position: absolute; top: 0; right: 0; width: 25%; display: block; font-size: 15px; height: 36px; line-height: 36px; text-indent: 1em; cursor: pointer; background: url(../images/searchm.png) no-repeat left 10px center; background-size: 21px; }
+.search input.input_submit { border: 0; color: #fff; outline: none; position: absolute; top: 0; right: 0; width: 25%; display: block; font-size: 15px; height: 36px; line-height: 36px; text-indent: 1em; cursor: pointer;  background-size: 21px; }
 .search input.input_text { border: 0; line-height: 36px; height: 36px; font-size: 14px; width: 75%; outline: none; text-indent: 1em; }
 .search.sblue { background: #00c1de; border: 1px solid #00c1de; }
 /*news_part03*/
-.news_part03 { }
 .news_part03 li { overflow: hidden; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dotted #ccc; }
 .news_part03 li i { width: 80px; height: 60px; margin-right: 10px; overflow: hidden; display: block; float: left; }
 .news_part03 i img { width: 100%; max-height: 100%; min-height: 100%; }
@@ -99,7 +93,6 @@ nav span { width: 100%; display: block; height: 20px }
 .copyright { color: #777; line-height: 28px; font-size: 14px; }
 .copyright a { color: #777; }
 .copyright img { display: inline-block; vertical-align: middle; }
-.icon-top { background: url(../images/istop.png) no-repeat center #fff; background-size: 22px; width: 40px; height: 40px; position: fixed; right: 5%; bottom: 10%; transition: all 0.3s; z-index: 9999999; border: #ececec 1px solid; }
 /*weizhi*/
 .weizhi { font-size: 14px; font-weight: normal; margin-bottom: 20px; position: relative; border-top: #ccc 2px solid; border-bottom: #ececec 1px solid; color: #888; line-height: 40px; }
 .weizhi a { color: #888 }
@@ -138,13 +131,7 @@ nav span { width: 100%; display: block; height: 20px }
 .timebox li i { position: relative; font-style: normal }
 .timebox li i:before { content: " "; height: 10px; width: 10px; border: 2px solid #cccaca; background: #fff; position: absolute; top: 4px; left: -26px; border-radius: 50%; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; }
 .timebox li:hover i:before { background: #ed4040 }
-@charset "utf-8";
-/**
- * base.css
- * https://www.yangqq.com/
- * Copyright 2020, design by yangqq
- */
- 
+
 @media screen and (min-width: 1120px) and (max-width: 1200px) {
 article, .topbar ul, .box { width: 1090px }
 .box_l { margin: 0 20px 20px; width: 620px; }
@@ -167,8 +154,10 @@ article, .topbar ul, .box { width: 940px }
 .topbar ul, .box { width: 98% }
 article { width: 100% }
 .topbar { margin-bottom: 0 }
-.logo { display: inline-block; float: left; margin: 5px 20px 0; }
-.logo img { }
+.logo { display: inline-block; 
+  float: left;
+   margin: 5px 20px 0; }
+
 nav { width: 100%; margin-bottom: 20px; box-shadow: 0px 3px 10px 1px rgba(144, 161, 180, 0.4); }
 ul#starlist { height: 40px; }
 nav span { display: none }
@@ -184,8 +173,6 @@ nav ul li a#selected:after { position: absolute; content: ""; width: 100%; heigh
 nav { overflow-x: auto; }
 .topnav { width: 1000px; overflow-x: auto; }
 
-ul#starlist { }
-}
  @media screen and (max-width: 640px) {
 .box_l { width: 96%; margin: auto; float: none }
 .box_r { width: 96%; margin: auto; float: none }
@@ -214,7 +201,4 @@ footer { text-align:center;background:  #373D41; width: 100%; border-top: #00C1D
 .endnav b { font-size: 16px; color: #00c1de; }
 .endnav p { margin-bottom: 5px }
 footer a { color: #73777a; }
-footer a:hover { color: #00C1DE }
-.top { width: 40px; height: 40px; display: block;     color: #fff;background-color: #000;
-  text-align: center;
-  line-height: 40px; right: 50px; bottom: 10%; position: fixed; }
+footer a:hover { color: #00C1DE }}}
