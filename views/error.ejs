@@ -1,3 +1,142 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>飞享喜悦-互联网运营，推广，营销，广告，文案，策划，新媒体，短视频</title>
+    <meta name="keywords" content="运营,推广,营销,广告,文案,策划,新媒体,短视频,互联网" />
+    <meta name="description" content="移动互联网运营，推广营销，文案策划，新媒体，短视频干货，也包含app推广，抖音快手推广，小红书推广，微信推广，产品运营，苹果竞价，aso优化，品牌营销，文案策划，
+    移动广告投放，信息流广告投放平台，积分墙平台，苹果asm竞价排名广告投放平台！是国内在运营推广营销领域最专业的推广平台，丰富运营推广经验！互联网运营推广就到飞享喜悦" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="<%=domain%>/images/favicon.ico" type="image/x-icon">
+    <link href="/style/app.css" rel="stylesheet">
+    <style>
+          @charset "utf-8";
+  /* css */
+  * { margin: 0; padding: 0 ;}
+  body { font: 15px "Microsoft YaHei", Arial, Helvetica, sans-serif; color: #333; background: #E9EAED; line-height: 1.5; overflow-x: hidden; }
+  img { border: 0; display: block }
+  ul, li { list-style: none; }
+  a { text-decoration: none; color: #333; }
+  a:hover { color: #000; text-decoration: none; }
+  .clear { clear: both; width: 100%; overflow: hidden; height: 20px }
+  .clearblank { clear: both; width: 100%; overflow: hidden; }
+  .fl { float: left!important; }
+  .fr { float: right!important; }
+  .box, article { width: 1200px; margin: auto; overflow: hidden }
+  .navbox { width: 1200px; margin: auto; }
+  .mt20 { margin-top: 20px; }
+  .font16 { font-size: 16px; }
+  .blue { color: #00C1DE }
+  /*header*/
+  header { width: 100%; padding: 5px 0; background: #000; height: 50px; }
+  header:hover { box-shadow:0 5px 5px #000;transition: all 1.5s }
+  header::before { background: #000 linear-gradient(to left,#007aff, #34aadc, #5856d6); content: ""; height: 5px; position: absolute; top: 0; width: 100%; }
+  .logo { float: left; margin-right: 60px; line-height: 56px; color: #fff; font-size: 22px }
+  .logo a { color: #fff }
+  .logo img { margin-top: 14px; }
+  .imgscale img { width: 100%; -moz-transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; transition: all 0.5s; }
+  .imgscale:hover img { transform: scale(1.1); }
+  /*nav*/
+  nav { float: left; height: 50px; line-height: 50px; text-align: center; margin-top: 3px; }
+  #starlist li { position: relative; display: inline; float: left; width: max-content; }
+  #starlist li a { display: inline; float: left; padding: 0 16px; color: #fff }
+  #starlist li a:hover, #starlist #selected, .selected > a, #starlist li:hover { color: #00c1de; }
+  #starlist li:hover a { color: #00c1de }
+  #starlist ul.sub { overflow: hidden; position: absolute; left: 0; top: 50px; background: #1C2327; display: none; z-index: 9 }
+  #starlist ul.sub li { height: 30px; line-height: 30px; font-size: 14px; }
+  #starlist ul.sub li:last-child { padding-bottom: 10px }
+  #starlist ul.sub li a { color: #FFF }
+  #starlist ul.sub li a:hover { color: #00c1de }
+  #starlist li:hover ul.sub { display: block }
+  @media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .navbox { width: 96% }
+    #starlist li a { padding: 0 10px; }
+    #starlist li.menu:before { right: 0 }
+    }
+    @media screen and (max-width: 1023px) {
+    /*header*/
+    header { position: fixed; z-index: 999 }
+    nav { width: 100%; height: auto; background: rgba(0,0,0,0.5); margin-top: 18px; position: fixed; z-index: 999; top: 42px; }
+    .searchico { position: absolute; top: 6px; right: 10px; }
+    .search { width: 80% }
+    .navbox { width: 100% }
+    .searchbox { width: 100%; position: fixed; top: 50px; z-index: 99; background: rgba(0,0,0,.8); }
+    .logo { margin-left: 0; line-height: 56px; float: none; text-align: center; margin-right: 0px; }
+    #mnavh { overflow: hidden; position: absolute; }
+    #mnavh { display: block; }
+    #starlist { display: none; width: 100%;/* top: 30px; */ }
+    #starlist li { width: 55%; text-align: center; background: #12b7de; float: none; display: block; font-weight: bold; }
+    #starlist li:last-child { padding-bottom: 100% }
+    #starlist li a { color: #fff; display: block; width: 100%; text-align: center; float: none; padding: 0; background: #12b7de; border-bottom: #49ccea 1px solid; }
+    #starlist ul.sub { display: block; position: inherit; left: inherit; top: inherit; }
+    #starlist ul.sub li { width: 100% }
+    #starlist ul.sub li:last-child { padding-bottom: 0; border-bottom: #49ccea 1px solid; }
+    #starlist ul.sub li a { color: #fff; font-weight: normal; border-bottom: none; }
+    #starlist ul.sub li a:hover, #starlist li:hover a, #starlist #selected { color: #fff; }
+    .menu span { display: block; width: 50px; height: 50px; background: #12b7de; opacity: 0.5; position: absolute; top: 0; right: 0; border-left: #49ccea 1px solid; }
+    #starlist li.menu:before { right: 20px; }
+    footer { background: #373D41; width: 100%; border-top: #00C1DE 10px solid; padding: 30px 0; color: #73777a; font-size: 14px; }
+  .wxbox { overflow: hidden; float: left; margin-right: 20px }
+  .wxbox li { float: left; margin: 0 10px; text-align: center }
+  .wxbox img { height: 100px }
+  .endnav b { font-size: 16px; color: #00c1de; }
+  .endnav p { margin-bottom: 5px }
+  footer a { color: #73777a; }
+  footer a:hover { color: #00C1DE }
+  .top { width: 40px; height: 40px; display: block;     color: #fff;background-color: #000;
+    text-align: center;
+    line-height: 40px; right: 50px; bottom: 10%; position: fixed; }
+    .minbox{
+        width: 500px;
+        margin: 40px auto;
+    }
+    .minbox img{
+        width: 100%;
+    }
+    /**/
+    }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="navbox">
+            <h2 id="mnavh"><span class="navicon"></span></h2>
+            <div class="logo"><a href="<%=domain%>/" alt="飞享喜悦" title="飞享喜悦">飞享喜悦 |<font class="font16">
+                        运营推广,营销策划,新媒体,短视频,互联网</font>
+                </a></div>
+            <nav>
+                <ul id="starlist">
+                    <li><a href="<%=title%>/" title="首页">网站首页</a></li>
+                    <li class="menu"><a href="<%=domain%>/" target="_blank">栏目介绍</a>
+                        <ul class="sub">
+                            <li><a href="<%=domain%>/list?column=抖音" target="_blank">推广</a></li>
+                            <li><a href="<%=domain%>/list?column=抖音" target="_blank">运营</a></li>
+                            <li><a href="<%=domain%>/list?column=抖音" target="_blank">营销</a></li>
+                            <li><a href="<%=domain%>/list?column=赚钱" target="_blank">热门新闻</a></li>
+                        </ul><span></span>
+                    </li>
+                    <li class="menu"><a href="<%=domain%>/about/" target="_blank">关于我们</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <article>
+<div class="minbox">
+<img src="/image/404.png" alt="404">
+</div>
+    </article>
+    <%include footer.ejs%>
+    <div class="errmsg" style="display: none;">
+        <p><%= message %></h1>
+        <p><%= error.status %></h2>
+        <pre><%= error.stack %></pre>
+    </div>
+    <script>
+
+
+    </script>
+</body>
+
+</html>
