@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>
-        <%=title%>
+        <%=data.title%>
     </title>
-    <meta name="keywords" content="<%=keywords%>" />
-    <meta name="description" content="<%=description%>" />
+    <meta name="keywords" content="<%=data.keywords%>" />
+    <meta name="description" content="<%=data.description%>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://www.siteluo7.com/images/favicon.ico" type="image/x-icon">
 
@@ -21,28 +21,28 @@
         <%include nav1.ejs%>
         <div class="box_l">
             <div class="weizhi">您现在的位置是：<a href="https://www.siteluo7.com/">首页</a>&nbsp;>&nbsp;
-                <a href="https://www.siteluo7.com/list?column=<%=column%>">
-                    <%=column%>
+                <a href="https://www.siteluo7.com/list?column=<%=data.column%>">
+                    <%=data.column%>
                 </a>&nbsp;>&nbsp;
                 <a href="https://www.siteluo7.com/A-<%=aid%>">
-                    <%=title%>
+                    <%=data.title%>
                 </a>
             </div>
             <div class="container">
                 <h1>
-                    <%=title%>
+                    <%=data.title%>
                 </h1>
                 <div class="info"><span>作者：
-            <%=editor%>
+            <%=data.editor%>
           </span><span>日期：
-            <%=ctime%>
+            <%=data.ctime%>
           </span>
           <span>阅读：
-            <%=rank%>
+            <%=data.rank%>
           </span>
                 </div>
                 <div class="content">
-                    <%-content%>
+                    <%-data.content%>
                         <div class="pagelist"></div>
                 </div>
                
