@@ -5,6 +5,7 @@ const article = require('../controller/article');
 
 router.get('/list', async (req, res, next) => {
 
+    
     let { column } = req.query;
     let list = await article.getlist(column, 20, 'aid rank ctime title keywords description column', 0)
     let olist = await article.getlist(column, 6, 'aid title', 2)
@@ -22,6 +23,7 @@ router.get('/list', async (req, res, next) => {
     hlist = null;
     data = null;
 });
+
 router.get('/A-:aid', async (req, res, next) => {
     const aid = req.params.aid;
 

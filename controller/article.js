@@ -37,7 +37,6 @@ module.exports = {
                 }
             })
         });
-        db.close()
         return findRes
         // res.json(findRes);
     },
@@ -70,7 +69,6 @@ module.exports = {
 
         });
         // console.log(findhot)
-        db.close()
         return findhot
         // res.json(findRes);
     },
