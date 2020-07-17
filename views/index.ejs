@@ -55,7 +55,7 @@
                     <div class="newsitem newsitemshow">
                         <div class="newspic">
                             <ul>
-                                <% data.dy1.slice(0,2).forEach(function(item){%>
+                                <% data.tg.slice(0,2).forEach(function(item){%>
                                     <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                                     </a>
                                     </li>
@@ -63,7 +63,7 @@
                             </ul>
                         </div>
                         <ul class="newslist">
-                            <% data.dy.slice(0,2).forEach(function(item){%>
+                            <% data.tg.slice(0,2).forEach(function(item){%>
                                 <li><i></i>
                                     <a href="https://www.siteluo7.com/A-<%=item.aid%>" title="<%=item.title%>" target="_blank">
                                         <%=item.title%>
@@ -78,7 +78,7 @@
                     <div class="newsitem">
                         <div class="newspic">
                             <ul>
-                                <% data.dy1.slice(2,4).forEach(function(item){%>
+                                <% data.tg.slice(2,4).forEach(function(item){%>
                                     <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                                     </a>
                                     </li>
@@ -86,7 +86,7 @@
                             </ul>
                         </div>
                         <ul class="newslist">
-                            <% data.dy.slice(2,4).forEach(function(item){%>
+                            <% data.tg.slice(2,4).forEach(function(item){%>
                                 <li><i></i>
                                     <a href="https://www.siteluo7.com/A-<%=item.aid%>" title="<%=item.title%>" target="_blank">
                                         <%=item.title%>
@@ -101,7 +101,7 @@
                     <div class="newsitem">
                         <div class="newspic">
                             <ul>
-                                <% data.dy1.slice(4,6).forEach(function(item){%>
+                                <% data.tg.slice(4,6).forEach(function(item){%>
                                     <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                                     </a>
                                     </li>
@@ -109,7 +109,7 @@
                             </ul>
                         </div>
                         <ul class="newslist">
-                            <% data.dy.slice(4,6).forEach(function(item){%>
+                            <% data.tg.slice(4,6).forEach(function(item){%>
                                 <li><i></i>
                                     <a href="https://www.siteluo7.com/A-<%=item.aid%>" title="<%=item.title%>" target="_blank">
                                         <%=item.title%>
@@ -124,7 +124,7 @@
                     <div class="newsitem">
                         <div class="newspic">
                             <ul>
-                                <% data.dy1.slice(6,8).forEach(function(item){%>
+                                <% data.tg.slice(6,8).forEach(function(item){%>
                                     <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                                     </a>
                                     </li>
@@ -132,7 +132,7 @@
                             </ul>
                         </div>
                         <ul class="newslist">
-                            <% data.dy.slice(6,8).forEach(function(item){%>
+                            <% data.tg.slice(6,8).forEach(function(item){%>
                                 <li><i></i>
                                     <a href="https://www.siteluo7.com/A-<%=item.aid%>" title="<%=item.title%>" target="_blank">
                                         <%=item.title%>
@@ -167,7 +167,7 @@
                         <h2 class="newstitle"><span><a href="https://www.siteluo7.com/list?column=推广" target="_blank">更多</a></span><b>推广</b>
                         </h2>
                         <ul>
-                            <% data.dy.forEach(function(item){%>
+                            <% data.tg.slice(0,6).forEach(function(item){%>
                                 <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                                 </a>
                                 </li>
@@ -180,7 +180,7 @@
                         <h2 class="newstitle"><span><a href="https://www.siteluo7.com/list?column=运营"
                                     target="_blank">更多</a></span><b>运营</b></h2>
                         <ul>
-                            <% data.zq.forEach(function(item){%>
+                            <% data.dl.slice(0,6).forEach(function(item){%>
                                 <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                                 </a>
                                 </li>
@@ -193,7 +193,7 @@
                         <h2 class="newstitle"><span><a href="https://www.siteluo7.com/list?column=营销"
                                     target="_blank">更多</a></span><b>营销</b></h2>
                         <ul>
-                            <% data.dy1.forEach(function(item){%>
+                            <% data.tg.slice(6).forEach(function(item){%>
                                 <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                                 </a>
                                 </li>
@@ -206,7 +206,7 @@
                         <h2 class="newstitle"><span><a href="https://www.siteluo7.com/list?column=热门新闻"
                                     target="_blank">更多</a></span><b>热门新闻</b></h2>
                         <ul>
-                            <% data.zq1.forEach(function(item){%>
+                            <% data.tg.slice(6).forEach(function(item){%>
                                 <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                                 </a>
                                 </li>
@@ -227,9 +227,9 @@
 
             </div>
             <div class="whitebg paihang">
-                <h2 class="htitle">技巧分享</h2>
+                <h2 class="htitle">推荐文章</h2>
                 <ul>
-                    <% data.dy.forEach(function(item){%>
+                    <% data.tj.forEach(function(item){%>
                         <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                         </a>
                         </li>
@@ -237,9 +237,9 @@
                 </ul>
             </div>
             <div class="whitebg tuijian">
-                <h2 class="htitle">常见问题</h2>
+                <h2 class="htitle">最新消息</h2>
                 <ul>
-                    <% data.zq.forEach(function(item){%>
+                    <% data.jr.forEach(function(item){%>
                         <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
                         </a>
                         </li>
@@ -247,16 +247,7 @@
                 </ul>
             </div>
 
-            <div class="whitebg wenzi">
-                <h2 class="htitle">加入我们</h2>
-                <ul>
-                    <% data.dy1.forEach(function(item){%>
-                        <li><a href="https://www.siteluo7.com/A-<%=item.aid%>" target="_blank"><span><%=item.title%></span></a></li>
-                        </a>
-                        </li>
-                        <% }) %>
-                </ul>
-            </div>
+
             <div class="links whitebg">
                 <h2 class="htitle">友情链接</h2>
                 <ul>

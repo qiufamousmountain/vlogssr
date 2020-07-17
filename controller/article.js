@@ -37,16 +37,17 @@ module.exports = {
                 }
             })
         });
+        db.close()
         return findRes
         // res.json(findRes);
     },
     getlist: async (column = 'App推广', len = 20, keys = 'aid rank ctime title keywords description column', hot = 0) => {
         let db = mongoClient('siteluo');
         let ArticleModel = db.model('ArticleSchema', ArticleSchema, 'Article');
-        let config = {}
+        let config = {column: column}
         let sort = { ctime: -1 }
         if (hot == 1) {
-            config = { column: column }
+            // config = { column: column }
             sort.rank = -1
         } else if (hot == 2) {
             config = { column: { $ne: column } }
@@ -69,6 +70,7 @@ module.exports = {
 
         });
         // console.log(findhot)
+        db.close()
         return findhot
         // res.json(findRes);
     },
