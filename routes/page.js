@@ -36,8 +36,8 @@ router.get('/A-:aid', async (req, res, next) => {
     
         return
     }
-    let olist = await article.getlist(arti.column, 6, 'aid title', 0)
-    let hlist = await article.getlist(arti.column, 10, 'aid title', 1)
+    let olist = await article.getlist(arti.data.column, 6, 'aid title', 0)
+    let hlist = await article.getlist(arti.data.column, 10, 'aid title', 1)
     let data = {
         domain: '',
         column:arti.data.column,
