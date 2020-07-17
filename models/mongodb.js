@@ -57,6 +57,9 @@ const ArticleSchema = new Schema(
         source: String,
         ctime: String,
         etime: String,
+        tag: String,
+        rank: String,
+        aid: String
     },
 );
 

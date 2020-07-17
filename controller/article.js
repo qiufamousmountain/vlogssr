@@ -8,16 +8,16 @@ const { resolveInclude } = require('ejs');
 // const utils = require('./utils');
 
 module.exports = {
-    getArticle: async (_id) => {
+    getArticle: async (aid) => {
         // const headers = utils.getHeader(req);
         let db = mongoClient('siteluo');
         let ArticleModel = db.model('ArticleSchema', ArticleSchema, 'Article');
-        if (!_id) {
+        if (!aid) {
             return res.json({ code: 400, msg: 'aid is required' })
         }
-        console.log(_id)
+        console.log(aid)
         let findRes = await new Promise((resolve, reject) => {
-            ArticleModel.findOne({ _id }, (error, data) => {
+            ArticleModel.findOne({ aid }, (error, data) => {
                 if (error) {
                     return reject({
                         code: 500,
@@ -40,21 +40,22 @@ module.exports = {
         return findRes
         // res.json(findRes);
     },
-    getlist: async (column = '抖音', len = 20, keys = '_id counts ctime title keywords description column', hot = 0) => {
+    getlist: async (column = 'App推广', len = 20, keys = 'aid rank ctime title keywords description column', hot = 0) => {
         let db = mongoClient('siteluo');
         let ArticleModel = db.model('ArticleSchema', ArticleSchema, 'Article');
         let config = {}
+        let sort = { ctime: -1 }
         if (hot == 1) {
-            config = { column:column }
+            config = { column: column }
+            sort.rank = -1
         } else if (hot == 2) {
             config = { column: { $ne: column } }
         }
-        console.log()
         let findhot = await new Promise((resolve, reject) => {
             ArticleModel
-                .find( config , keys)
+                .find(config, keys)
                 .limit(len)
-                .sort({ _id: -1 })
+                .sort(sort)
                 .exec((error, data) => {
                     if (error) {
                         return reject({ code: 500, msg: 'db error' });
@@ -73,47 +74,6 @@ module.exports = {
     },
 
 
-    getpre: async (lid, pre = 1) => {
-        let db = mongoClient('siteluo');
-        let ArticleModel = db.model('ArticleSchema', ArticleSchema, 'Article');
-        let findhot = await new Promise((resolve, reject) => {
-            if (pre == 1) {
-                ArticleModel.find({ '_id': { '$gt': lid } }, '_id title ')
-                    .limit(1)
-                    .sort({ _id: pre })
-                    .exec((error, data) => {
-                        if (error) {
-                            return reject({ code: 500, msg: 'db error' });
-                        }
-                        if (data) {
-                            resolve({ code: 200, data: data });
-                        } else {
-                            resolve({ code: 400, msg: 'no list' });
-                        }
-                    })
-            } else {
-                ArticleModel.find({ '_id': { '$lt': lid } }, '_id title ')
-                    .limit(1)
-                    .sort({ _id: pre })
-                    .exec((error, data) => {
-                        if (error) {
-                            return reject({ code: 500, msg: 'db error' });
-                        }
-                        if (data) {
-                            resolve({ code: 200, data: data });
-                        } else {
-                            resolve({ code: 400, msg: 'no list' });
-                        }
-                    })
-            }
-
-
-
-        });
-        // console.log(findhot)
-        return findhot
-        // res.json(findRes);
-    },
     // //新建页面
     // newArticle: async (req, res) => {
     //     const args = req.body;

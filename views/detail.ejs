@@ -24,7 +24,7 @@
                 <a href="https://www.siteluo7.com/list?column=<%=column%>">
                     <%=column%>
                 </a>&nbsp;>&nbsp;
-                <a href="https://www.siteluo7.com/A-<%=_id%>">
+                <a href="https://www.siteluo7.com/A-<%=aid%>">
                     <%=title%>
                 </a>
             </div>
@@ -37,6 +37,9 @@
           </span><span>日期：
             <%=ctime%>
           </span>
+          <span>阅读：
+            <%=rank%>
+          </span>
                 </div>
                 <div class="content">
                     <%-content%>
@@ -45,14 +48,9 @@
                
             </div>
             <div class="info-pre-next">
-                <p>上一篇:
-                    <a href="<%=pre?domain+'/A-'+pre._id:'/' %>">
-                        <%=pre?pre.title:'返回首页' %>
-                    </a>
-                </p>
-                <p>下一篇:
-                    <a href="<%=nex?domain+'/A-'+nex._id:'/' %>">
-                        <%=nex?nex.title:'返回首页' %>
+                <p>
+                    <a href="https://www.siteluo7.com">
+                        返回首页
                     </a>
                 </p>
             </div>
@@ -62,7 +60,7 @@
                 <ul>
                     <% olist.forEach(function(item){%>
                         <li>
-                            <a href="https://www.siteluo7.com/A-<%=item._id%>" title="<%=item.title %>">
+                            <a href="https://www.siteluo7.com/A-<%=item.aid%>" title="<%=item.title %>">
                                 <%=item.title %>
                             </a>
                         </li>

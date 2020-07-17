@@ -32,11 +32,11 @@ router.get('/list', async (req, res, next) => {
     }
     );
 });
-router.get('/A-:_id', async (req, res, next) => {
-    const _id = req.params._id;
+router.get('/A-:aid', async (req, res, next) => {
+    const aid = req.params.aid;
 
-    let data = await article.getArticle(_id)
-    let olist = await article.getlist(data.column, 12, '_id title', 1)
+    let data = await article.getArticle(aid)
+    let olist = await article.getlist(data.column, 12, 'aid title', 1)
     let split_array = (arr, len) => {
         let a_len = arr.length;
         let result = [];
