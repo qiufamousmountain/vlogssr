@@ -26,32 +26,36 @@
             <ul class="news_list">
 
                 <% list.forEach(function(item){%>
-                    <a href="https://www.siteluo7.com/A-<%=item.aid%>" title="<%=item.title %>" target="_blank">
-                        <h2>
-                            <%=item.title %>
-                        </h2>
-                        <li>
+                <a href="https://www.siteluo7.com/A-<%=item.aid%>" title="<%=item.title %>" target="_blank">
+                    <h2>
+                        <%=item.title %>
+                    </h2>
+                    <li>
 
-                            <p class="news_list_info">
-                                <%=item.description %>
-                            </p>
-                            <p class="news_list_time"><span><a href="https://www.siteluo7.com/A-<%=item.aid%>"
-                target="_blank"><%=item.column %></a></span>&nbsp;<span>日期：<%=item.ctime%></span>&nbsp;<span>阅读：<%=item.rank%></span></p>
-                        </li>
-                    </a>
-                    <% }) %>
+                        <p class="news_list_info">
+                            <%=item.description %>
+                        </p>
+                        <p class="news_list_time"><span><a href="https://www.siteluo7.com/A-<%=item.aid%>"
+                                    target="_blank"><%=item.column %></a></span>&nbsp;<span>日期：<%=item.ctime%></span>&nbsp;<span>阅读：<%=item.rank%></span>
+                        </p>
+                    </li>
+                </a>
+                <% }) %>
+
+
+                <%=list.length==0?'该栏目暂时还没有文章，敬请期待...':''%>
             </ul>
 
             <div class="otherlink">
                 <h2 class="news_t">相关文章</h2>
                 <ul>
                     <% olist.forEach(function(item){%>
-                        <li>
-                            <a href="https://www.siteluo7.com/A-<%=item.aid%>" title="<%=item.title %>">
-                                <%=item.title %>
-                            </a>
-                        </li>
-                        <% }) %>
+                    <li>
+                        <a href="https://www.siteluo7.com/A-<%=item.aid%>" title="<%=item.title %>">
+                            <%=item.title %>
+                        </a>
+                    </li>
+                    <% }) %>
 
                 </ul>
             </div>
