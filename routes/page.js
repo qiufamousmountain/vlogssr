@@ -33,6 +33,7 @@ router.get('/A-:aid', async (req, res, next) => {
             message: arti.msg,
             error: {}
         });
+    
         return
     }
     let olist = await article.getlist(arti.column, 6, 'aid title', 0)
@@ -41,7 +42,10 @@ router.get('/A-:aid', async (req, res, next) => {
         domain: '',
         data: arti.data,
         olist: olist.code == 200 ? olist.data : [],
-        hlist: hlist.code == 200 ? hlist.data : []
+        hlist: hlist.code == 200 ? hlist.data : [],
+        title:arti.data.title,
+        keywords:arti.data.title,
+        description:arti.data.description,
     }
     res.render('detail', data);
     arti = null;
