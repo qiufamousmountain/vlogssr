@@ -28,13 +28,13 @@ router.get('/A-:aid', async (req, res, next) => {
     let arti = await article.getArticle(aid)
     if (arti.code !== 200) {
         res.render('error', {
-            message: data.msg,
+            message: arti.msg,
             error: {}
         });
         return
     }
-    let olist = await article.getlist(data.column, 6, 'aid title', 1)
-    let hlist = await article.getlist(column, 10, 'aid title', 1)
+    let olist = await article.getlist(arti.column, 6, 'aid title', 0)
+    let hlist = await article.getlist(arti.column, 10, 'aid title', 1)
     let data = {
         domain: '',
         data: arti.data,
