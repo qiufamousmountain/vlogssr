@@ -6,8 +6,8 @@ const article = require('../controller/article');
 router.get('/list', async (req, res, next) => {
 
     let { column, page, lid } = req.query;
-    let data = await article.getlist(column, 20, '_id counts ctime title keywords description column', 1)
-    let olist = await article.getlist(column, 12, '_id title', 2)
+    let data = await article.getlist(column, 20, 'aid counts ctime title keywords description column', 1)
+    let olist = await article.getlist(column, 12, 'aid title', 2)
     if (data.code !== 200) {
         res.render('error', {
             message: data.msg,
@@ -45,8 +45,6 @@ router.get('/A-:aid', async (req, res, next) => {
         }
         return result;
     }
-    let pre = await article.getpre(_id, 1)
-    let nex = await article.getpre(_id, -1)
 
     if (data.code !== 200) {
         res.render('error', {
@@ -57,8 +55,6 @@ router.get('/A-:aid', async (req, res, next) => {
     }
     data = data.data
     olist = olist.data
-    data.pre = pre.data && pre.data[0] || {};
-    data.nex = nex.data && nex.data[0] || {};
     data.domain = '';
     data.olist = olist.length >= 12 ? olist.slice(0, 6) : olist
     data.hlist = olist.length >= 12 ? olist.slice(6, olist.length) : olist;
@@ -67,8 +63,8 @@ router.get('/A-:aid', async (req, res, next) => {
 });
 
 router.get('/', async (req, res, next) => {
-    let dy = await article.getlist('抖音', 12, '_id ctime title description', 1)
-    let zq = await article.getlist('赚钱', 12, '_id ctime title description', 1)
+    let dy = await article.getlist('抖音', 12, 'aid ctime title description', 1)
+    let zq = await article.getlist('赚钱', 12, 'aid ctime title description', 1)
     dy = dy.data;
     zq = zq.data;
 
