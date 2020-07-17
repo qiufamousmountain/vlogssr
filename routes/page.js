@@ -50,8 +50,8 @@ router.get('/A-:aid', async (req, res, next) => {
 });
 
 router.get('/', async (req, res, next) => {
-    let tg = await article.getlist('APP推广', 12, 'aid ctime title description', 0)
-    let dl = await article.getlist('代理业务', 12, 'aid ctime title description', 0)
+    let tg = await article.getlist('APP推广', 14, 'aid ctime title description', 0)
+    let dl = await article.getlist('代理业务', 14, 'aid ctime title description', 0)
     let tj = await article.getlist('APP推广', 10, 'aid title', 1)
     let jr = await article.getlist('代理业务', 10, 'aid title', 1)
     let data = {
