@@ -43,10 +43,10 @@ module.exports = {
     getlist: async (column = 'App推广', len = 20, keys = 'aid rank ctime title keywords description column', hot = 0) => {
         let db = mongoClient('siteluo');
         let ArticleModel = db.model('ArticleSchema', ArticleSchema, 'Article');
-        let config = {column: column}
+        let config = { column: column }
         let sort = { ctime: -1 }
         if (hot == 1) {
-            // config = { column: column }
+            config = {}
             sort.rank = -1
         } else if (hot == 2) {
             config = { column: { $ne: column } }

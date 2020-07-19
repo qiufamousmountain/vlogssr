@@ -5,7 +5,7 @@ const article = require('../controller/article');
 
 router.get('/list', async (req, res, next) => {
 
-    
+
     let { column } = req.query;
     let list = await article.getlist(column, 20, 'aid rank ctime title keywords description column', 0)
     let olist = await article.getlist(column, 6, 'aid title', 2)
@@ -33,14 +33,14 @@ router.get('/A-:aid', async (req, res, next) => {
             message: arti.msg,
             error: {}
         });
-    
+
         return
     }
     let olist = await article.getlist(arti.data.column, 6, 'aid title', 0)
     let hlist = await article.getlist(arti.data.column, 10, 'aid title', 1)
     let data = {
         domain: '',
-        column:arti.data.column,
+        column: arti.data.column,
 
         data: arti.data,
         olist: olist.code == 200 ? olist.data : [],
@@ -56,17 +56,22 @@ router.get('/A-:aid', async (req, res, next) => {
 
 router.get('/', async (req, res, next) => {
     let tg = await article.getlist('APP推广', 16, 'aid ctime title description', 0)
-    let dl = await article.getlist('代理业务', 16, 'aid ctime title description', 0)
-    let tj = await article.getlist('APP推广', 10, 'aid title', 1)
-    let jr = await article.getlist('代理业务', 10, 'aid title', 1)
+    let dl = await article.getlist('代理业务', 8, 'aid ctime title', 0)
+    let yy = await article.getlist('产品运营', 8, 'aid ctime title', 0)
+    let xw = await article.getlist('热门新闻', 8, 'aid ctime title', 0)
+    let pp = await article.getlist('品牌营销', 8, 'aid ctime title', 0)
+    let hlist = await article.getlist(null, 8, 'aid title', 1)
     let data = {
         domain: '',
         type: '',
         data: {
             tg: tg.code == 200 ? tg.data : [],
             dl: dl.code == 200 ? dl.data : [],
-            tj: tj.code == 200 ? tj.data : [],
-            jr: jr.code == 200 ? jr.data : [],
+            yy: yy.code == 200 ? yy.data : [],
+            xw: xw.code == 200 ? xw.data : [],
+            pp: pp.code == 200 ? pp.data : [],
+            hlist: hlist.code == 200 ? hlist.data : [],
+
         }
 
     }
@@ -74,8 +79,11 @@ router.get('/', async (req, res, next) => {
     res.render('index', data);
     tg = null;
     dl = null;
-    tj = null;
-    jr = null;
+    yy = null;
+    xw = null;
+    pp = null;
+    hlist = null;
+
     data = null;
 });
 module.exports = router;
